@@ -1,5 +1,5 @@
 ---
-import '../css/global.css';
+import "../css/global.css";
 export interface Props {
 	title: string;
 }
@@ -11,32 +11,60 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
+		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<!-- Links External -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
 		<slot />
+		<!-- Links External -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
+			integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"
+			integrity="sha512-IHDCHrefnBT3vOCsvdkMvJF/MCPz/nBauQLzJkupa4Gn4tYg5a6VGyzIrjo6QAUy3We5HFOZUlkUpP0dkgE60A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+		<!-- My Script -->
+		<script src="../scripts/main.js"></script>
 	</body>
 </html>
 <style is:global>
 	:root {
+		--primary: #1236ca;
 		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			#da62c4 30%,
+			white 60%
+		);
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
+		background-color: #f6f6f6;
 	}
-	
-	*,*::after,*::before{
+
+	*,
+	*::after,
+	*::before {
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
 	}
-	html,body{
+	html,
+	body {
 		height: 100%;
 		width: 100%;
 	}

@@ -1,0 +1,76 @@
+---
+import Navigation from "../Navigation.astro";
+---
+
+<section id="page1">
+	<Navigation />
+	<div class="hero">
+		<h1>Experience Real <br /> Estate Agility</h1>
+		<div class="hero-inner">
+			<p>
+				Create a digital twin of your existing building <br /> and release the potential
+				of Web3.
+			</p>
+			<button>LEARN MORE</button>
+		</div>
+	</div>
+	<video
+		src="https://thisismagma.com/wp-content/themes/magma/assets/home/hero/1.mp4?2"
+		autoplay
+		loop
+		muted></video>
+</section>
+<style>
+	#page1 {
+		height: 100%;
+		width: 100%;
+		background-color: var(--primary);
+		position: relative;
+	}
+	video {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		z-index: -99;
+	}
+	.hero {
+		position: absolute;
+		bottom: 5%;
+		height: 35vh;
+		width: 50vw;
+		left: 10%;
+	}
+	.hero > h1 {
+		font-family: a;
+		font-size: min(3rem, 5vw);
+		font-weight: 100;
+		line-height: 1;
+		color: #fff;
+	}
+	.hero-inner {
+		position: absolute;
+		bottom: 0%;
+		height: 35%;
+		width: 100%;
+	}
+	.hero-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-family: a;
+	}
+	.hero-inner > button {
+		padding: 10px 20px;
+		border: none;
+		border-radius: 50px;
+		background-color: #fff;
+		color: #0b48ed;
+		font-size: 16px;
+		font-family: b;
+	}
+	.hero-inner > p {
+		font-size: 1.3vw;
+		font-weight: 100;
+		color: #fff;
+	}
+</style>
